@@ -1,0 +1,64 @@
+# Ignore paths that contain user-generated content.
+docroot/files
+docroot/sites/*/files
+docroot/sites/*/files-private
+docroot/sites/*/private
+acquia-files
+private/files
+
+# ignore settings
+# docroot/sites/*/settings.php
+docroot/sites/*/settings.local.php
+docroot/sites/*/settings.ddev.php
+.lando.local.yml
+
+# ignore development services
+docroot/sites/*/development.services.yml
+
+# composer added vendor dependencies
+vendor/.git
+bin/*
+
+# Sass
+.sass-cache
+.bundle
+*.css.map
+
+# OS X
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+#Exports
+*.gz
+*.sql
+*.zip
+
+# Drupal console
+console
+
+# Automated build assets
+docroot/libraries
+docroot/themes/custom/*/css/*
+docroot/core
+docroot/modules/contrib
+docroot/profiles/contrib
+docroot/themes/contrib
+docroot/robots.txt
+docroot/.htaccess
+vendor/
+dist/
+docroot/sites/simpletest
+
+# NPM
+*.log
+node_modules/
+mix-manifest.json
+
+# ESLint
+eslint-reports/
+
+# IDE
+.idea/
+.vscode
+/.gitattributes
