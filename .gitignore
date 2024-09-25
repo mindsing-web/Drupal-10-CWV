@@ -1,19 +1,19 @@
 # Ignore paths that contain user-generated content.
-docroot/files
-docroot/sites/*/files
-docroot/sites/*/files-private
-docroot/sites/*/private
+web/files
+web/sites/*/files
+web/sites/*/files-private
+web/sites/*/private
 acquia-files
 private/files
 
 # ignore settings
-# docroot/sites/*/settings.php
-docroot/sites/*/settings.local.php
-docroot/sites/*/settings.ddev.php
+# web/sites/*/settings.php
+web/sites/*/settings.local.php
+web/sites/*/settings.ddev.php
 .lando.local.yml
 
 # ignore development services
-docroot/sites/*/development.services.yml
+web/sites/*/development.services.yml
 
 # composer added vendor dependencies
 vendor/.git
@@ -38,17 +38,17 @@ bin/*
 console
 
 # Automated build assets
-docroot/libraries
-docroot/themes/custom/*/css/*
-docroot/core
-docroot/modules/contrib
-docroot/profiles/contrib
-docroot/themes/contrib
-docroot/robots.txt
-docroot/.htaccess
+web/libraries
+web/themes/custom/*/css/*
+web/core
+web/modules/contrib
+web/profiles/contrib
+web/themes/contrib
+web/robots.txt
+web/.htaccess
 vendor/
 dist/
-docroot/sites/simpletest
+web/sites/simpletest
 
 # NPM
 *.log
