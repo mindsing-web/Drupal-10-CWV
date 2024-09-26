@@ -1,0 +1,9 @@
+name: CWV MindSing Theme
+type: theme
+description: 'A simple theme optimized for CWV.'
+core_version_requirement: '>=10.3'
+base theme: false
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'
