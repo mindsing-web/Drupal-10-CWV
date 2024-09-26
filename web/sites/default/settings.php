@@ -52,6 +52,11 @@ $settings['state_cache'] = TRUE;
  */
 $settings['migrate_node_migrate_type_classic'] = FALSE;
 
+/**
+ * Set configuration sync settings.
+ */
+$settings['config_sync_directory'] = $app_root . '/../config/' . basename($site_path);
+
 // Automatically generated include for settings managed by ddev.
 if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev.php')) {
   include __DIR__ . '/settings.ddev.php';
