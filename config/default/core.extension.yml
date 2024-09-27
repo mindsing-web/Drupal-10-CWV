@@ -1,7 +1,9 @@
 _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
+  admin_toolbar: 0
   block: 0
+  breakpoint: 0
   dblog: 0
   dynamic_page_cache: 0
   field: 0
@@ -12,6 +14,7 @@ module:
   path_alias: 0
   system: 0
   text: 0
+  toolbar: 0
   user: 0
   minimal: 1000
 theme:
