@@ -1,0 +1,20 @@
+uuid: 56930796-16e0-4634-8ca6-6d59a3841f68
+langcode: en
+status: true
+dependencies:
+  theme:
+    - cwv_theme
+_core:
+  default_config_hash: ABoKnlk20KHqZRw_2Qr4EvaFvH4lnQ2nuhunHeE1JIU
+id: cwv_theme_local_actions
+theme: cwv_theme
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

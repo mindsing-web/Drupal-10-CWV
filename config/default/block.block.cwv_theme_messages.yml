@@ -1,0 +1,22 @@
+uuid: ee974a97-2226-494c-85aa-8ac2a2888042
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - cwv_theme
+_core:
+  default_config_hash: aeqlWs7HwctZeZC7ADcbxfqehJzBRfZKmuZz3DsH3_4
+id: cwv_theme_messages
+theme: cwv_theme
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }
