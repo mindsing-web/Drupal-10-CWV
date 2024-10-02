@@ -1,0 +1,19 @@
+{
+  "name": "MindSing CWV Theme",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.49",
+    "mix-tailwindcss": "^1.3.0",
+    "postcss": "^8.4.19",
+    "postcss-import": "^15.0.1",
+    "tailwindcss": "^3.2.4",
+    "tailwindcss-skip-link": "^1.0.1",
+    "webpack": "^5.75.0"
+  },
+  "scripts": {
+    "dev": "mix -- --env NODE_ENV=development",
+    "watch": "mix watch -- --env NODE_ENV=development",
+    "production": "mix --production -- --env NODE_ENV=production"
+  }
+}
