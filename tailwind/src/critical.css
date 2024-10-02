@@ -1,0 +1,9 @@
+/* These critical styles are inlined into the HTML. */
+@config "../tailwind.config-critical.js";
+@tailwind base;
+@tailwind components;
+@layer components {
+  /* Compnent styling below. */
+}
+
+/* Other styling below. */
