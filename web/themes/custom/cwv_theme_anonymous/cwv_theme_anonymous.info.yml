@@ -1,0 +1,13 @@
+name: CWV MindSing, Anonymous Theme
+type: theme
+description: 'Anonymous version of a simple theme optimized for CWV.'
+core_version_requirement: '>=10.3'
+base theme: cwv_theme
+
+libraries-override:
+  system/base: false
+
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'
