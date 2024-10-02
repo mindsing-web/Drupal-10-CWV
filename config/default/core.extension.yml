@@ -22,4 +22,5 @@ theme:
   stark: 0
   claro: 0
   cwv_theme: 0
+  cwv_theme_anonymous: 0
 profile: minimal
