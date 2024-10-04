@@ -1,0 +1,12 @@
+{#
+/**
+ * @file
+ * The main CSS file to be asynchronously loaded.
+ *
+ * @see https://web.dev/articles/defer-non-critical-css
+ */
+#}
+{% set timestamp = 'now'|date('U') %}
+{% set stylesheet = '/themes/custom/cwv_theme/dist/main.css?' ~ timestamp %}
+<link rel="preload" href="{{ stylesheet }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ stylesheet }}"></noscript>
