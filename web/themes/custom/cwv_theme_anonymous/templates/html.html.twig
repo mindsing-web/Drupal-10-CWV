@@ -1,0 +1,84 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the basic structure of a single Drupal page.
+ *
+ * Variables:
+ * - logged_in: A flag indicating if user is logged in.
+ * - root_path: The root path of the current page (e.g., node, admin, user).
+ * - node_type: The content type for the current node, if the page is a node.
+ * - head_title: List of text elements that make up the head_title variable.
+ *   May contain one or more of the following:
+ *   - title: The title of the page.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site.
+ * - page_top: Initial rendered markup. This should be printed before 'page'.
+ * - page: The rendered page markup.
+ * - page_bottom: Closing rendered markup. This variable should be printed after
+ *   'page'.
+ * - db_offline: A flag indicating if the database is offline.
+ * - placeholder_token: The token for generating head, css, js and js-bottom
+ *   placeholders.
+ *
+ * @see template_preprocess_html()
+ *
+ * @ingroup themeable
+ */
+#}
+{% block libraries %}
+  {# Add library attachments here. #}
+{% endblock libraries %}
+
+{% block structure %}
+  {# HTML structure. #}
+  <!DOCTYPE html>
+  <html{{ html_attributes }}>
+    {% block head %}
+      {# Head of document. #}
+      <head>
+        <head-placeholder token="{{ placeholder_token }}">
+        <title>{{ head_title|safe_join(' | ') }}</title>
+
+        {% block css_head %}
+          {# Add CSS to head of HTML. #}
+          <style type="text/css">
+            {{ include('@cwv_theme/dist/critical.css', ignore_missing = true) }}
+          </style>
+
+          {# "css-placeholder" in the anonymous theme is moved to footer. #}
+          <css-placeholder token="{{ placeholder_token }}">          {{ include ('@hiscoxus_23/base/_main-css.html.twig', ignore_missing = true) }}
+
+          {# "js-placeholder" in the anonymous theme is moved to footer. #}
+          <js-placeholder token="{{ placeholder_token }}">
+
+        {% endblock css_head %}
+
+          <style type="text/css">
+            {{ include('@cwv_theme/dist/main.css', ignore_missing = true) }}
+          </style>
+
+      </head>
+    {% endblock head %}
+
+    {% block body %}
+      {# Body of HTML. #}
+      <body{{ attributes }}>
+        {#
+          Keyboard navigation/accessibility link to main content section in
+          page.html.twig.
+        #}
+        <a href="#main-content" class="visually-hidden focusable left-0 absolute p-3 m-3 -translate-y-16 focus:translate-y-0">
+          {{ 'Skip to main content'|t }}
+        </a>
+        {{ page_top }}
+        {{ page }}
+        {{ page_bottom }}
+
+        {% block body_footer %}
+          {# Bottom of body. #}
+          <js-bottom-placeholder token="{{ placeholder_token }}">
+        {% endblock body_footer %}
+      </body>
+    {% endblock body %}
+  </html>
+{% endblock structure %}
