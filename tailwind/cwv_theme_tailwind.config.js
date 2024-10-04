@@ -22,13 +22,7 @@ module.exports = {
     'top-3',
     'z-50',
   ],
-  plugins: [
-    require('tailwindcss-skip-link')(),
-    function ({ addVariant }) {
-      addVariant('child', '& > *');
-      addVariant('child-hover', '& > *:hover');
-    },
-  ],
+  plugins: [ ],
   theme: {
     accentColor: ({ theme }) => ({
       ...theme('colors'),
