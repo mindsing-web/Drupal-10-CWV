@@ -10,5 +10,5 @@ mix.setPublicPath(path.normalize('../'));
 
 
 mix.postCss('./src/main.css', `${cwv_theme_dist}`)
-.postCss('./src/critical.css', `${theme_2023_dist}`)
+.postCss('./src/critical.css', `${cwv_theme_dist}`)
 .version();
