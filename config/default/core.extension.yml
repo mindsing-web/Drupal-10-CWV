@@ -6,6 +6,7 @@ module:
   breakpoint: 0
   dblog: 0
   dynamic_page_cache: 0
+  fences: 0
   field: 0
   field_ui: 0
   filter: 0
