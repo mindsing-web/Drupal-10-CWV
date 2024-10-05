@@ -2,3 +2,7 @@ admin:
   css:
     layout:
       dist/admin.css: {}
+global:
+  header: true
+  js:
+    dist/global.js: { attributes: { defer: true } }
