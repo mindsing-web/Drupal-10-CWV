@@ -1,0 +1,4 @@
+admin:
+  css:
+    layout:
+      dist/admin.css: {}
