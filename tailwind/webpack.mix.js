@@ -10,6 +10,9 @@ mix.setPublicPath(path.normalize('../'));
 
 
 mix.postCss('./src/main.css', `${cwv_theme_dist}`)
-.postCss('./src/admin.css', `${cwv_theme_dist}`)
-.postCss('./src/critical.css', `${cwv_theme_dist}`)
-.version();
+  .postCss('./src/admin.css', `${cwv_theme_dist}`)
+  .postCss('./src/critical.css', `${cwv_theme_dist}`)
+  .version();
+
+mix.js('./src/global.js', `${cwv_theme_dist}`)
+  .version();
