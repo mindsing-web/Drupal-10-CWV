@@ -1,1 +1,18 @@
 {% extends "@cwv_theme/html.html.twig" %}
+
+{% block libraries %}
+{% endblock libraries %}
+
+{% block css_head %}
+  <style type="text/css">
+    {{ include('@cwv_theme/dist/critical.css', ignore_missing = true) }}
+  </style>
+{% endblock css_head %}
+
+{% block body_footer %}
+  <css-placeholder token="{{ placeholder_token }}">          {{ include ('@hiscoxus_23/base/_main-css.html.twig', ignore_missing = true) }}
+  <js-placeholder token="{{ placeholder_token }}">
+  {# To avoid load, we do not load
+   # js-bottom-placeholder, which loads jQuery and other JS from Drupal. #}
+  {# <js-bottom-placeholder token="{{ placeholder_token }}"> #}
+{% endblock body_footer %}
