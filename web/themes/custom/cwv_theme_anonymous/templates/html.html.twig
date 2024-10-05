@@ -11,7 +11,8 @@
 {% endblock css_head %}
 
 {% block body_footer %}
-  <css-placeholder token="{{ placeholder_token }}">          {{ include ('@hiscoxus_23/base/_main-css.html.twig', ignore_missing = true) }}
+  <css-placeholder token="{{ placeholder_token }}">
+  {{ include ('@cwv_theme/includes/_main-css.html.twig', ignore_missing = true) }}
   <js-placeholder token="{{ placeholder_token }}">
   {# To avoid load, we do not load
    # js-bottom-placeholder, which loads jQuery and other JS from Drupal. #}

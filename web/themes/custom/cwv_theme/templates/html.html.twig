@@ -48,16 +48,13 @@
           </style>
 
           {# "css-placeholder" in the anonymous theme is moved to footer. #}
-          <css-placeholder token="{{ placeholder_token }}">          {{ include ('@hiscoxus_23/base/_main-css.html.twig', ignore_missing = true) }}
+          <css-placeholder token="{{ placeholder_token }}">
+          {{ include ('@cwv_theme/includes/_main-css.html.twig', ignore_missing = true) }}
 
           {# "js-placeholder" in the anonymous theme is moved to footer. #}
           <js-placeholder token="{{ placeholder_token }}">
 
         {% endblock css_head %}
-
-          <style type="text/css">
-            {{ include('@cwv_theme/dist/main.css', ignore_missing = true) }}
-          </style>
 
       </head>
     {% endblock head %}
