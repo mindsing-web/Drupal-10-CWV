@@ -2,13 +2,8 @@
 @config "../tailwind.config-critical.js";
 @tailwind base;
 @tailwind components;
-@layer components {
-  /* Compnent styling below. */
-}
 
-/* Other styling below. */
 h1 {
-  font-size: 2rem;
-  margin: 1rem 0;
+  @apply crt-text-3xl crt-pb-3;
 }
 @tailwind utilities;
