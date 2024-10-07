@@ -144,6 +144,19 @@ module.exports = {
       200: '2',
     },
     caretColor: ({ theme }) => theme('colors'),
+    colors: {
+      'blue': '#1fb6ff',
+      'purple': '#7e5bef',
+      'pink': '#ff49db',
+      'red': '#ff0000',
+      'orange': '#ff7849',
+      'green': '#13ce66',
+      'yellow': '#ffc82c',
+      'gray-dark': '#273444',
+      'gray': '#8492a6',
+      'gray-light': '#d3dce6',
+    },
+    /*
     colors: ({ colors }) => ({
       inherit: colors.inherit,
       transparent: colors.transparent,
@@ -172,6 +185,7 @@ module.exports = {
       pink: colors.pink,
       rose: colors.rose,
     }),
+    */
     columns: {
       auto: 'auto',
       1: '1',
