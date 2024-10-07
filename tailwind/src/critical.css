@@ -6,4 +6,6 @@
 h1 {
   @apply crt-text-3xl crt-pb-3;
 }
+/* Other styling below. */
+
 @tailwind utilities;
