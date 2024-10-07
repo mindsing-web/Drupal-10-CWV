@@ -3,25 +3,6 @@ module.exports = {
   content: [
     '../web/themes/custom/cwv_theme/templates/**/**/*.{twig,js}',
   ],
-  safelist: [
-    'border-transparent',
-    'lg:block',
-    'lg:border-r-4',
-    'lg:border-red',
-    'lg:max-w-[14rem]',
-    'lg:pt-0',
-    'lg:relative',
-    'lg:sticky',
-    'lg:top-[8rem]',
-    'pt-16',
-    'right-4',
-    'rotate-180',
-    'snap-mandatory',
-    'snap-start',
-    'snap-y',
-    'top-3',
-    'z-50',
-  ],
   plugins: [ ],
   theme: {
     accentColor: ({ theme }) => ({
