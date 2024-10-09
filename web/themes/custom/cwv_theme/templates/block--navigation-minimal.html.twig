@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * Theme override to display Minimalist Navigation block.
+ *
+ */
+#}
+
+{% set header_wrap_classes = [
+  'crt-bg-white',
+  'crt-h-desktopNav lg:crt-h-28',
+]
+%}
+
+{% set nav_wrap_classes = [
+  'nav__wrap ',
+  'crt-bg-white crt-border-solid crt-border-b-2 crt-border-greyLight crt-fixed crt-px-4 crt-top-0 crt-w-full crt-z-1000 mMax:crt-duration-200 mMax:crt-transition-top mMax:crt-ease-in-out mMax:crt-py-0 mMax:crt-right-initial',
+]
+%}
+
+{% set minimal_nav_phone = false %}
+{% set minimal_nav_button_text = 'Contact us'|t %}
+{% set minimal_nav_button_link = 'https://mindsing.com'|t %}
+
+
+<div id="header__wrap" class="{{ header_wrap_classes|join(' ') }}">
+  <header id="minNav" role="banner">
+    <div class="{{ nav_wrap_classes|join(' ') }}">
+      <div id="nav__content" class="nav__content crt-flex crt-items-center crt-justify-between crt-mx-auto crt-max-w-navMax crt-h-desktopNav lg:crt-h-28">
+        <div class="nav__logo order-1 crt-mx-auto xs:crt-mx-0">
+          {% include '@cwv_theme/templates/block--system-branding-block.html.twig' with {
+            logo_url: 'true',
+            logo_type: 'responsive',
+          } %}
+        </div>
+        {% if minimal_nav_phone or minimal_nav_button_text %}
+          <nav class="mMax:crt-flex crt-items-center crt-right-3 crt-font-sans crt-tracking-normal crt-absolute crt-text-red crt-mt-[0.3125rem] mMax:crt-order-3 mMax:crt-static">
+            <ul class="crt-flex crt-items-center ">
+            {% if minimal_nav_phone %}
+              <li class="last:crt-mr-0 crt-font-normal crt-items-center crt-hidden xs:crt-flex crt-p-0 crt-m-0 crt-list-none">
+                <a class="focus:crt-underline hover:crt-underline" href="tel:{{ minimal_nav_phone|replace({'-': ''}) }}">{{ minimal_nav_phone }}</a>
+              </li>
+            {% endif %}
+            {% if minimal_nav_button_text %}
+              <li class="last:crt-mr-0 crt-text-xs crt-items-center crt-p-0 crt-mt-0 crt-mb-0 crt-ml-4.5 crt-list-none mMax:crt-items-center mMax:crt-list-none mMax:crt-p-0 mMax:crt-mt-0 mMax:crt-mr-4.5 mMax:crt-mb-0">
+                <a class="crt-hidden xs:crt-flex crt-bg-blueMed crt-leading-none crt-px-4 crt-py-4 xs:crt-px-8 xs:crt-py-[0.95rem] crt-text-sm crt-tracking-[0.5px] crt-transition-transform crt-duration-150 hover:crt-scale-115 focus:crt-scale-115 crt-block crt-text-white crt-font-bold" href="{{ minimal_nav_button_link }}">
+                  {{ minimal_nav_button_text }}
+                </a>
+              </li>
+            {% endif %}
+            </ul>
+          </nav>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+</div>
