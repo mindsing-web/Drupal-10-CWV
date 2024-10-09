@@ -14,12 +14,11 @@
 
 {% set nav_wrap_classes = [
   'nav__wrap ',
-  'crt-bg-white crt-border-solid crt-border-b-2 crt-border-greyLight crt-fixed crt-px-4 crt-top-0 crt-w-full crt-z-1000 mMax:crt-duration-200 mMax:crt-transition-top mMax:crt-ease-in-out mMax:crt-py-0 mMax:crt-right-initial',
+  'crt-bg-white crt-shadow-md crt-border-solid crt-border-b-8 crt-border-blueMed crt-fixed crt-px-4 crt-top-0 crt-w-full crt-z-1000 mMax:crt-duration-200 mMax:crt-transition-top mMax:crt-ease-in-out mMax:crt-py-0 mMax:crt-right-initial',
 ]
 %}
-
-{% set minimal_nav_phone = false %}
-{% set minimal_nav_button_text = 'Contact us'|t %}
+{% set minimal_nav_phone = "1-888-888-8888" %}
+{% set minimal_nav_button_text = 'PUSH ME'|t %}
 {% set minimal_nav_button_link = 'https://mindsing.com'|t %}
 
 
@@ -34,7 +33,7 @@
           } %}
         </div>
         {% if minimal_nav_phone or minimal_nav_button_text %}
-          <nav class="mMax:crt-flex crt-items-center crt-right-3 crt-font-sans crt-tracking-normal crt-absolute crt-text-red crt-mt-[0.3125rem] mMax:crt-order-3 mMax:crt-static">
+          <nav class="mMax:crt-flex crt-items-center crt-right-3 crt-font-sans crt-tracking-normal crt-absolute crt-text-black crt-mt-[0.3125rem] mMax:crt-order-3 mMax:crt-static">
             <ul class="crt-flex crt-items-center ">
             {% if minimal_nav_phone %}
               <li class="last:crt-mr-0 crt-font-normal crt-items-center crt-hidden xs:crt-flex crt-p-0 crt-m-0 crt-list-none">
