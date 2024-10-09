@@ -11,30 +11,37 @@
 *
 #}
 {%  if logo_url %}
-<a href="{{ path('<front>') }}" class="site-logo crt-inline-block">
+  <a href="{{ path('<front>') }}" class="site-logo crt-inline-block">
 {% endif %}
-  <span class="crt-sr-only">{{ 'Mindsing'|t }}</span>
+
+<span class="crt-sr-only">{{ 'Mindsing'|t }}</span>
+
 {# If logo_type is responsive, use both logos with classes. #}
 {% if logo_type == 'responsive' %}
+
   {# Set full logo classes for desktop. #}
   <span class="site-logo-span crt-hidden mMax:crt-inline crt-align-baseline">
     {% include '@cwv_theme/templates/img/logo.svg' %}
   </span>
+
   {# Set simple logo classes for mobile. #}
   <span class="site-logo-span crt-inline mMax:crt-hidden crt-align-baseline" >
-     {% include '@cwv_theme/templates/img/logo-mobile.svg' %}
+    {% include '@cwv_theme/templates/img/logo-mobile.svg' %}
   </span>
+
 {# Else If logo_type is simple print simple logo and classes #}
 {% elseif logo_type == 'simple' %}
   <span class="site-logo-span crt-inline crt-align-baseline" >
-  {% include '@cwv_theme/templates/img/logo-mobile.svg' %}
+    {% include '@cwv_theme/templates/img/logo-mobile.svg' %}
   </span>
+
 {# Else print full logo and classes. #}
 {% else %}
   <span class="site-logo-span crt-inline crt-align-baseline">
-   {% include '@cwv_theme/templates/img/logo.svg' %}
+    {% include '@cwv_theme/templates/img/logo.svg' %}
   </span>
 {% endif %}
+
 {% if logo_url %}
-</a>
+  </a>
 {% endif %}
