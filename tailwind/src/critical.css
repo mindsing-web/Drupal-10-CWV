@@ -3,9 +3,11 @@
 @tailwind base;
 @tailwind components;
 
-h1 {
-  @apply crt-text-3xl crt-pb-3;
-}
-/* Other styling below. */
+/* Other styling below.*/
 
+/* Applying the transition to all classed <span> <svg> </span> in the site-logo
+   with the use of @apply and "crt-" prefixed classes. */
+.site-logo-span svg {
+  @apply crt-transition-transform crt-duration-150 hover:crt-scale-115 focus:crt-scale-115;
+}
 @tailwind utilities;
