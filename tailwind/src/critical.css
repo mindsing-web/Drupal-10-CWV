@@ -10,4 +10,8 @@
 .site-logo-span svg {
   @apply crt-transition-transform crt-duration-150 hover:crt-scale-115 focus:crt-scale-115;
 }
+
+h1 {
+  @apply crt-text-3xl crt-py-3;
+}
 @tailwind utilities;
