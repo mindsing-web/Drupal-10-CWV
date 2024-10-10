@@ -3,7 +3,7 @@
 @tailwind base;
 @tailwind components;
 
-/* Other styling below.*/
+/* Other styling below. */
 
 /* Applying the transition to all classed <span> <svg> </span> in the site-logo
    with the use of @apply and "crt-" prefixed classes. */
@@ -14,4 +14,5 @@
 h1 {
   @apply crt-text-3xl crt-py-3;
 }
+
 @tailwind utilities;
