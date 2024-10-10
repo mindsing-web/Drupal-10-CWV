@@ -33,3 +33,8 @@
 .node--unpublished {
   background-color: #f17991;
 }
+
+.nav__wrap {
+  position: relative;
+  z-index: 9;
+}
