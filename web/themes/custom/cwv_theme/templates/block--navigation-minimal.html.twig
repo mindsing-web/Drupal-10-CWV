@@ -25,7 +25,7 @@
 <div id="header__wrap" class="{{ header_wrap_classes|join(' ') }}">
   <header id="minNav" role="banner">
     <div class="{{ nav_wrap_classes|join(' ') }}">
-      <div id="nav__content" class="nav__content crt-flex crt-items-center crt-justify-between crt-mx-auto crt-max-w-navMax crt-h-desktopNav lg:crt-h-28">
+      <div id="nav__content" class="nav__content crt-flex crt-items-center crt-justify-between crt-mx-auto crt-max-w-navMax crt-h-desktopNav lg:crt-h-28 crt-overflow-y-hidden lg:crt-overflow-y-visible">
         <div class="nav__logo order-1 crt-mx-auto xs:crt-mx-0">
           {% include '@cwv_theme/templates/block--system-branding-block.html.twig' with {
             logo_url: 'true',

@@ -20,24 +20,24 @@
 {% if logo_type == 'responsive' %}
 
   {# Set full logo classes for desktop. #}
-  <span class="site-logo-span crt-hidden mMax:crt-inline crt-align-baseline">
+  <span class="site-logo-span crt-hidden lg:crt-block crt-align-baseline crt-w-[12rem]">
     {% include '@cwv_theme/templates/img/logo.svg' %}
   </span>
 
   {# Set simple logo classes for mobile. #}
-  <span class="site-logo-span crt-inline mMax:crt-hidden crt-align-baseline" >
+  <span class="site-logo-span crt-flex lg:crt-hidden crt-align-baseline crt-w-16">
     {% include '@cwv_theme/templates/img/logo-mobile.svg' %}
   </span>
 
 {# Else If logo_type is simple print simple logo and classes #}
 {% elseif logo_type == 'simple' %}
-  <span class="site-logo-span crt-inline crt-align-baseline" >
+  <span class="site-logo-span crt-flex crt-align-baseline crt-w-16">
     {% include '@cwv_theme/templates/img/logo-mobile.svg' %}
   </span>
 
 {# Else print full logo and classes. #}
 {% else %}
-  <span class="site-logo-span crt-inline crt-align-baseline">
+  <span class="site-logo-span crt-block crt-align-baseline crt-w-[12rem]">
     {% include '@cwv_theme/templates/img/logo.svg' %}
   </span>
 {% endif %}
