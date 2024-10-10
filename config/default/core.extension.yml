@@ -4,12 +4,15 @@ module:
   admin_toolbar: 0
   block: 0
   breakpoint: 0
+  contextual: 0
   dblog: 0
   dynamic_page_cache: 0
   fences: 0
   field: 0
   field_ui: 0
   filter: 0
+  layout_builder: 0
+  layout_discovery: 0
   mysql: 0
   node: 0
   page_cache: 0
