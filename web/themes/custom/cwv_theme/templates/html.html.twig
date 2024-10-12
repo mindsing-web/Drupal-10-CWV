@@ -41,6 +41,11 @@
         <head-placeholder token="{{ placeholder_token }}">
         <title>{{ head_title|safe_join(' | ') }}</title>
 
+        {% block fonts_head %}
+          {# Add font-files. #}
+          {{ include('@cwv_theme/includes/_font-declaration.html.twig', ignore_missing = true) }}
+        {% endblock fonts_head %}
+
         {% block css_head %}
           {# Add CSS to head of HTML. #}
           <style type="text/css">
