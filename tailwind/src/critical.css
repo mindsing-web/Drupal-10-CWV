@@ -12,7 +12,7 @@
 }
 
 h1 {
-  @apply crt-text-3xl crt-py-3;
+  @apply crt-text-3xl crt-py-3 crt-font-bold;
 }
 
 @tailwind utilities;
