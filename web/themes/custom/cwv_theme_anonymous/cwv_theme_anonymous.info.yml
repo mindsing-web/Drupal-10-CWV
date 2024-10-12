@@ -6,6 +6,7 @@ base theme: cwv_theme
 
 libraries-override:
   system/base: false
+  layout_discovery/onecol: false
 
 regions:
   header: 'Header'
